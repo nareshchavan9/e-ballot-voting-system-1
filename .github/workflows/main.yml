@@ -1,0 +1,60 @@
+name: MERN CI/CD Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      # Step 1: Checkout the code
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Setup Node.js
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      # # Step 3: Install backend dependencies
+      # - name: Install backend dependencies
+      #   run: |
+      #     cd backend
+      #     npm install
+
+      # # Step 4: Install frontend dependencies
+      # - name: Install frontend dependencies
+      #   run: |
+      #     cd frontend
+      #     npm install
+
+      # # Step 5: Build frontend
+      # - name: Build frontend
+      #   run: |
+      #     cd frontend
+      #     npm run build
+
+      # Optional: Step 6 - Run backend tests (if you have any)
+      # - name: Run backend tests
+      #   run: |
+      #     cd backend
+      #     npm test
+
+      # Step 7: Deploy (optional)
+      # Add your own deployment logic here, for example:
+      # - scp build folder to a server
+      # - trigger render/vercel/netlify webhook
+      # - deploy to Docker/Heroku etc.
+
+      # Example: Echo deployment done
+      - name: Deployment Placeholder
+        run: echo "Deploy step goes here."
