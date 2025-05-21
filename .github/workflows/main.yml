@@ -31,11 +31,11 @@ jobs:
       #     cd backend
       #     npm install
 
-      # # Step 4: Install frontend dependencies
-      # - name: Install frontend dependencies
-      #   run: |
-      #     cd frontend
-      #     npm install
+      # Step 4: Install frontend dependencies
+      - name: Install frontend dependencies
+        run: |
+          cd frontend
+          npm install
 
       # # Step 5: Build frontend
       # - name: Build frontend
