@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://e-ballot-voting-system-1.onrender.com/api';
 
 // Create axios instance
 const api = axios.create({
