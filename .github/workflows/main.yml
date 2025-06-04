@@ -31,8 +31,8 @@ jobs:
           cd backend
           npm install
 
-      # Step 4: Install frontend dependencies
-      - name: Install frontend dependencies
+      # Step 4: Install fontend dependencies
+      - name: Install fontend dependencies
         run: |
           cd fontend
           npm install
@@ -40,7 +40,7 @@ jobs:
       # Step 5: Build frontend
       - name: Build frontend
         run: |
-          cd frontend
+          cd fontend
           npm run build
 
       # Optional: Step 6 - Run backend tests (if you have any)
